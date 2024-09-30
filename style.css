@@ -1,0 +1,90 @@
+:root {
+    --bg-color: #191919;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, Arial;
+    }
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('dog-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+header {
+    /*background-color: #000000;*/
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: auto;
+    width: 200px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+.hero {
+    text-align: center;
+    background-image: url("cityscape.jpg"); /* Replace with the cityscape image */
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text {
+    margin-left: 100px;
+    margin-right: auto;
+    
+}
+
+.hero img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.hero button {
+    background-color: #fff;
+    margin-left: 215px;
+    margin-right: auto;
+    color: #333;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+}
