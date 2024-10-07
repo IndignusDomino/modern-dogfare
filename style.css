@@ -353,9 +353,7 @@ footer{
 /*Media Queries for Phones*/
 
 @media (max-width: 375px) { 
-  .hero h1 {
-    
-  }
+
 
 
   /*Media Queries for Tablets*/
@@ -364,3 +362,4 @@ footer{
     
     }
   }
+
