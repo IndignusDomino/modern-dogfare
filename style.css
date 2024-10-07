@@ -73,6 +73,19 @@ header {
   filter: drop-shadow(1px 1px 5px black);
 }
 
+.menu {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 0 0 0 20px;
+  right: 0;
+  opacity: .75;
+  color: #333;
+}
+
+.menu:hover {
+  box-shadow: 0 0 5px #ffffff;
+}
+
 .nav {
   color: black;
   font-weight: bold;
@@ -80,9 +93,8 @@ header {
 }
 
 .nav:hover {
-  background-color: white;
+  color: red;
   border-radius: 5px;
-  padding: 3px;
 }
 
 nav ul {
@@ -96,10 +108,11 @@ nav ul {
   top: 20px;
 }
 
-nav ul li {
-  margin-right: 1rem;
-}
 
+nav ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 .hero {
   text-align: center;
@@ -140,7 +153,8 @@ nav ul li {
 
 .hero button:hover {
   opacity: 1;
-  color: black;
+  color: red;
+  box-shadow: 0 0 10px #ffffff;
 }
 
 .hero button:active {
@@ -228,6 +242,7 @@ nav ul li {
 
 .contact {
   background-color: black;
+  
 }
 
 .contact form {
@@ -239,6 +254,10 @@ nav ul li {
 input, textarea {
   padding: 10px;
   margin-bottom: 10px;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  color: white;
+  border-radius: 5px;
 }
 
 h2 {
@@ -254,12 +273,17 @@ h2 {
   display: block;
   margin: auto;
   padding: 7px 10px;
+  font-weight: bold;
 }
 
 .submit:hover {
   background-color: black;
-  color: white;
+  color: red;
+  box-shadow: 0 0 10px #ffffff;
+  font-weight: bold;
 }
+
+
 
 /*Footer*/
 footer{
@@ -323,58 +347,20 @@ footer{
 .socials a:hover i{
   color:red;
 }
-/*
-.footer-bottom{
-  background: #000;
-  width: 100vw;
-  text-align: center;
-}
 
-.footer-bottom p{
-  float: left;
-  font-size: 14px;
-  word-spacing: 2px;
-  text-transform: capitalize;
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-.footer-bottom p a{
-color:#44bae8;
-font-size: 16px;
-text-decoration: none;
-}
-.footer-bottom span{
-  text-transform: uppercase;
-  opacity: .4;
-  font-weight: 200;
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-.footer-menu{
-  float: right;
-  margin-top: 0;
-  margin-bottom: 5px;
 
-}
-.footer-menu ul{
-display: flex;
-margin-top: 0;
-margin-bottom: 5px;
-}
-.footer-menu ul li{
-padding-right: 10px;
-display: block;
-}
-.footer-menu ul li a{
-color: #cfd2d6;
-text-decoration: none;
-}
-.footer-menu ul li a:hover{
-color: #27bcda;
-}
-*/
-@media (max-width:500px) {
-.footer-menu ul{
-display: flex;
-margin-top: 10px;
-margin-bottom: 20px;
+
+/*Media Queries for Phones*/
+
+@media (max-width: 375px) { 
+  .hero h1 {
+    
+  }
+
+
+  /*Media Queries for Tablets*/
+
+  @media (min-width: 800px) { 
+    
+    }
+  }
