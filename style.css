@@ -1,4 +1,4 @@
-/*RESET*/
+/* RESET */
 :root {
   --bg-color: #191919;
   padding: 0;
@@ -23,27 +23,25 @@ body {
   padding: 0;
 }
 
-
-/*Wrapper*/
+/* Wrapper */
 .wrapper {
   width: 100%;
-  height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 
 section {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh;  Removed fixed height */
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
   scroll-snap-align: start;
+  min-height: 100vh; /* Ensure section takes at least full viewport height */
 }
 
-
-/*Main Body*/
+/* Main Body */
 .home {
   background-image: url("dog-bg.jpg");
   background-size: cover;
@@ -62,7 +60,7 @@ header {
 .logo {
   height: auto;
   width: 200px;
-  position:absolute;
+  position: absolute;
   left: 20px;
   top: 20px;
   width: 150px;
@@ -78,7 +76,7 @@ header {
   padding: 5px;
   border-radius: 0 0 0 20px;
   right: 0;
-  opacity: .75;
+  opacity: 0.75;
   color: #333;
 }
 
@@ -103,11 +101,10 @@ nav ul {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  position:absolute;
+  position: absolute;
   right: 20px;
   top: 20px;
 }
-
 
 nav ul li {
   margin-left: 10px;
@@ -147,7 +144,7 @@ nav ul li {
   border: none;
   cursor: pointer;
   border-radius: 10px;
-  opacity: .75;
+  opacity: 0.75;
   font-weight: bold;
 }
 
@@ -163,12 +160,13 @@ nav ul li {
   background-color: black;
 }
 
-
-/*Shop Section*/
+/* Shop Section */
 .product-container {
   display: flex;
-  flex-wrap: wrap; /* Allow products to wrap onto multiple lines */
-  justify-content: space-between; /* Distribute products evenly */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 90%; /* Limit the container width */
+  margin: 0 auto; /* Center the container */
 }
 
 .product-list {
@@ -182,6 +180,15 @@ nav ul li {
   margin-bottom: 20px;
   border: 1px solid #ccc;
   padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  background-color: black;
+  color: white;
 }
 
 .product img {
@@ -196,8 +203,7 @@ nav ul li {
 }
 
 .product-price {
-  color: 
-  green;
+  color: green;
   text-align: center;
 }
 
@@ -219,7 +225,7 @@ nav ul li {
 }
 
 .add-button:hover {
-  background-color: black;
+  background-color: red;
   color: white;
 }
 
@@ -228,21 +234,19 @@ nav ul li {
   color: black;
 }
 
-
-/*About Section*/
-
+/* About Section */
 .about-container {
-  margin: 200px 200px;
-  padding: 300px 300px;
   text-align: center;
+  padding: 20px; /* Use relative units for padding */
 }
 
+p {
+  margin: 0;
+}
 
-/*Contact*/
-
+/* Contact */
 .contact {
   background-color: black;
-  
 }
 
 .contact form {
@@ -251,7 +255,8 @@ nav ul li {
   gap: 10px;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 10px;
   margin-bottom: 10px;
   background-color: #171717;
@@ -283,11 +288,9 @@ h2 {
   font-weight: bold;
 }
 
-
-
-/*Footer*/
-footer{
-  position: absolute;
+/* Footer */
+footer {
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -296,14 +299,16 @@ footer{
   width: 100vw;
   color: #fff;
 }
-.footer-content{
+
+.footer-content {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
 }
-.footer-content h3{
+
+.footer-content h3 {
   font-size: 1rem;
   font-weight: 500;
   text-transform: capitalize;
@@ -348,18 +353,54 @@ footer{
   color:red;
 }
 
-
-
-/*Media Queries for Phones*/
-@media screen and (min-width: 600px) {
-  .wrapper {
-    scroll-snap-align: none;
-    }
+/* Media Queries for Tablets */
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column; /* Stack products vertically */
+    align-items: center; /* Center products */
+    margin-top: 100px;
   }
 
-  /*Media Queries for Tablets*/
-  @media (min-width: 800px) { 
-    .wrapper {
-    scroll-snap-align: none; 
-    }
+  .product {
+    margin-bottom: 40px; /* Add more space between products */
   }
+
+  nav ul {
+    flex-direction: column; /* Stack navigation links */
+    align-items: center; /* Center links */
+  }
+
+  nav ul li {
+    margin-bottom: 10px; /* Add space between links */
+  }
+
+  .about-container {
+    margin: 100px 50px; /* Reduce margin */
+    padding: 200px 100px; /* Reduce padding */
+  }
+}
+
+/* Media Queries for Phones */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 3rem; /* Reduce font size */
+  }
+
+  .menu {
+    display: none; /* Hide the regular menu */
+  }
+
+  /* add styles for a hamburger menu here */
+  .hero button {
+    padding: 0.8rem 1.5rem; /* Reduce button size */
+  }
+
+  .about-container {
+    margin: 50px 20px; /* Further reduce margin */
+    padding: 100px 50px; /* Further reduce padding */
+  }
+}
+
+.product-container {
+  margin-top: 150px;
+}
