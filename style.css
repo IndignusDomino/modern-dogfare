@@ -351,15 +351,15 @@ footer{
 
 
 /*Media Queries for Phones*/
-
-@media (max-width: 375px) { 
-
-
-
-  /*Media Queries for Tablets*/
-
-  @media (min-width: 800px) { 
-    
+@media screen and (min-width: 600px) {
+  .wrapper {
+    scroll-snap-align: none;
     }
   }
 
+  /*Media Queries for Tablets*/
+  @media (min-width: 800px) { 
+    .wrapper {
+    scroll-snap-align: none; 
+    }
+  }
