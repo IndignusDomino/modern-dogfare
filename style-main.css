@@ -186,7 +186,7 @@ nav ul li {
 }
 
 .product:hover {
-  transform: scale(1.05);
+  transform: scale(1.2);
   background-color: black;
   color: white;
 }
@@ -299,6 +299,15 @@ nav ul li {
 
 p {
   margin: 0;
+}
+
+.abt-dog {
+  width: 350px;
+  height: auto;
+}
+
+.about-title {
+  margin-top: 10px;
 }
 
 /* Contact */
