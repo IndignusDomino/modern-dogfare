@@ -161,6 +161,10 @@ nav ul li {
 }
 
 /* Shop Section */
+.shop {
+  min-height: 90vh;
+}
+
 .product-container {
   display: flex;
   flex-wrap: wrap;
@@ -231,6 +235,13 @@ nav ul li {
   padding: 7px 10px;
 }
 
+.read-button:hover {
+  background-color: black;
+  color: red;
+  box-shadow: 0 0 10px #ffffff;
+  font-weight: bold;
+}
+
 .add-button:hover {
   background-color: green;
   color: white;
@@ -292,6 +303,11 @@ nav ul li {
 }
 
 /* About Section */
+
+.about {
+  min-height: 90vh;
+}
+
 .about-container {
   text-align: center;
   padding: 20px; /* Use relative units for padding */

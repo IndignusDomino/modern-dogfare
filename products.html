@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
+    <!--Styling-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="style-main.css">
+
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">-->
 
     <title>MODERN DOGFARE</title>
 
@@ -21,15 +25,19 @@
     <main>
     <div class="wrapper">
 
+        <!--HomeLanding Section-->
         <section class="home" id="home"> 
             <header>
 
+                <!-- Navigation Bar -->
                 <nav class="nav-container">
                     
+                    <!--Logo-->
                     <div class="nav-left">
                         <a href="/"><img src="Logo.png" alt="Modern Dogfare Logo" class="logo"></a>
                     </div>
                     
+                    <!--Navigation Menu-->
                     <div class="nav-right">
                         <ul class="menu">
                             <li><a href="#home" class="nav">HOME</a></li>
@@ -41,18 +49,13 @@
                     </ul>
                 </nav>
             </header>
-            
-        <div class="hero">
-            <h1 class="hero-text">GEARS FOR <br>MODERN CANINE <br> WARRIORS </h1>
-            <a href="#shop"><button>SHOP NOW</button></a>
-        </div>
-        </section>
 
+        <!-- Product / Shop Section -->
         <section class="shop" id="shop">
             <div class="product-container">
 
                 <article class="product">
-                    <img src="helmet.jpg" alt="Helmet" class="product--image">
+                    <img src="helmet.jpg" alt="Helmet">
                     <h2 class="product-title">HELMET</h2>
                     <p class="product-price">389.89€</p>
                     <p class="product-description">Protect your canine partner with our Intelligent Helmet.</p>
@@ -61,7 +64,7 @@
                 </article>
 
                 <article class="product">
-                    <img src="vest.jpg" alt="Kevlar Vest" class="product--image">
+                    <img src="vest.jpg" alt="Kevlar Vest">
                     <h2 class="product-title">VEST</h2>
                     <p class="product-price">689.89€</p>
                     <p class="product-description">Gear up your working dog with our bullet-proof Kevlar Vest.</p>
@@ -70,7 +73,7 @@
                 </article>
 
                 <article class="product">
-                    <img src="visor.jpg" alt="Visor" class="product--image">
+                    <img src="visor.jpg" alt="Visor">
                     <h2 class="product-title">VISOR</h2>
                     <p class="product-price">289.89€</p>
                     <p class="product-description">Enhance your K9's vision and protection with our OptX Visor. </p>
@@ -79,7 +82,7 @@
                 </article>
 
                 <article class="product">
-                    <img src="drone.jpg" alt="Drone" class="product--image">
+                    <img src="drone.jpg" alt="Drone">
                     <h2 class="product-title">DRONE</h2>
                     <p class="product-price">989.89€</p>
                     <p class="product-description">Assist your warrior's situational awareness using our Spy Drone.</p>
@@ -89,18 +92,20 @@
             </div>
         </section>
     
+        <!-- Modal -->
         <div id="productModal" class="modal">
             <div class="modal-content">
                     <span class="close">&times;</span>
                     <h5>Product Details</h5>
-                    <img src="" alt="Product Image" id="modal-product-image" class="product--image" />
+                    <img src="" alt="Product Image" id="modalProductImage" />
                     <p id="modalProductDescription"></p>
                     <p id="modalProductPrice"></p>
                     <button class="add-button">Add to Cart</button>
             </div>
         </div>
 
-        <script>
+        <!-- Product Modal Script (source:Redi Github)-->
+        <script/>
         // Get the modal
         var modal = document.getElementById("productModal");
 
@@ -116,7 +121,7 @@
             modal.style.display = "block";
             // Populate modal content based on the product details
             var product = btn.closest(".product");
-            document.getElementById("modal-product-image").src = product.querySelector(".product--image").src;
+            document.getElementById("modalProductImage").src = product.querySelector(".product--image").src;
             document.getElementById("modalProductDescription").innerText = product.querySelector(".product-description").innerText;
             document.getElementById("modalProductPrice").innerText = product.querySelector(".product-price").innerText;
           };
@@ -134,45 +139,6 @@
           }
         };
     </script>
-
-        <section class="about" id="about">
-            <div class="about-container">
-                <div>
-                    <img src="abt-dog.png" alt="pitbull" class="abt-dog">
-                </div>
-                <h2 class="about-title">Forged in the Crucible of Adventure</h2>
-                <div class="about-text">
-                    <p>Our gears are not merely functional; </p>
-                    <p>they're a testament to the indomitable spirit of our canine companions.</p>
-                    <p>Each piece is designed to enhance your canine's abilities,</p>
-                    <p>ensuring they are always ready to face the unknown.</p>
-                    <p>From the rugged wilderness to the urban jungle,</p>
-                    <p>our tactical equipments are your dog's unwavering ally.</p>
-                    &nbsp
-                    <p>Modern Dogfare is more than just a store;</p>
-                    <p>it's a sanctuary for those who share an unyielding bond with their canine companions.</p>
-                    <p>We are the purveyors of tactical gear,</p>
-                    <p>meticulously crafted to equip your four-legged partner</p>
-                    <p>for the challenges that lie ahead.</p>
-                </div>
-
-                
-            </div>
-        </section>
-
-
-        <!--Contact Us Section-->
-        <section class="contact" id="contact">
-            <div class="contact">
-            <h2 class="contact-text">Contact Us</h2>
-                <form class="contact-form">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" required></textarea>
-                    <button class="submit" type="submit">SUBMIT</button>
-                </form>
-            </div>
-        </section>
 
     </main>
 
