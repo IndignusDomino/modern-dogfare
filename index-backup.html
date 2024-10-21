@@ -20,42 +20,58 @@
 <body>
     <main>
     <div class="wrapper">
-            <header class="header">
+
+        <section class="home" id="home"> 
+            <header>
+
                 <nav class="nav-container">
                     
                     <div class="nav-left">
                         <a href="/"><img src="Logo.png" alt="Modern Dogfare Logo" class="logo"></a>
                     </div>
                     
-                    <div class="nav">
-                        <input type="checkbox" id="nav-check">
-                        <div class="nav-header">
-                        </div>
-                        <div class="nav-btn">
-                          <label for="nav-check">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </label>
-                        </div>
-                        
-                        <div class="nav-links">
-                          <a href="#home">Home</a>
-                          <a href="#shop">Shop</a>
-                          <a href="#about">About</a>
-                          <a href="#contact">Contact</a>
-                          <a href="#">Bag (0)</a>
-                        </div>
-                      </div>
+                    <div class="nav-right" id="myTopnav">
+                        <div class="nav">
+                            <input type="checkbox" id="nav-check">
+                            <div class="nav-header">
+                            </div>
+                            <div class="nav-btn">
+                              <label for="nav-check">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                              </label>
+                            </div>
+
+                        <ul class="menu">
+                            <!--<li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i></li>-->
+                            <li><a href="#home" class="nav">HOME</a></li>
+                            <li><a href="#shop" class="nav">SHOP</a></li>
+                            <li><a href="#about" class="nav">ABOUT</a></li>
+                            <li><a href="#contact" class="nav">CONTACT</a></li>
+                            <li><a href="#" class="nav">BAG (0)</a></li>
+                        </ul>
+                    </div>
+
+                    <script>
+                        function myFunction() {
+                          var x = document.getElementById("myTopnav");
+                          if (x.className === "nav-right") {
+                            x.className += " responsive";
+                          } else {
+                            x.className = "nav-right";
+                          }
+                        }
+                        </script>
                 </nav>
             </header>
             
-    <div class="home" id="home">
         <div class="hero">
             <h1 class="hero-text">GEARS FOR <br>MODERN CANINE <br> WARRIORS </h1>
             <a href="#shop"><button>SHOP NOW</button></a>
         </div>
-    </div>
+        </section>
 
         <section class="shop" id="shop">
             <div class="product-container">
