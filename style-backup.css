@@ -26,6 +26,8 @@ body {
 /* Wrapper */
 .wrapper {
   width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 section {
@@ -35,6 +37,7 @@ section {
   align-items: center;
   justify-content: center;
   align-content: center;
+  scroll-snap-align: start;
   min-height: 100vh; /* Ensure section takes at least full viewport height */
 }
 
@@ -43,8 +46,15 @@ section {
   background-image: url("dog-bg.jpg");
   background-size: cover;
   background-position: center;
-  width: 100%;
-  min-height: 100vh;
+}
+
+header {
+  max-width: 100%;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -52,57 +62,57 @@ section {
   width: 200px;
   position: absolute;
   left: 20px;
-  top: 8px;
+  top: 20px;
   width: 150px;
   filter: drop-shadow(1px 2px 2px #222);
-  z-index: 10;
 }
 
 .logo:hover {
   filter: drop-shadow(1px 1px 5px black);
 }
 
+.menu {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 0 0 0 20px;
+  right: 0;
+  opacity: 0.75;
+  color: #333;
+}
+
+.menu:hover {
+  box-shadow: 0 0 5px #ffffff;
+}
+
 .nav {
-  height: 50px;
-  width: 100%;
-  background-color: black;
-  position: relative;
+  color: black;
+  font-weight: bold;
+  margin: 5px;
 }
 
-.nav > .nav-header {
-  display: inline;
+.nav:hover {
+  color: red;
+  border-radius: 5px;
 }
 
-.nav > .nav-header > .nav-title {
-  display: inline-block;
-  font-size: 22px;
-  color: #fff;
-  padding: 10px 10px 10px 10px;
-}
-
-.nav > .nav-btn {
+.nav-right .icon {
   display: none;
 }
 
-.nav > .nav-links {
-  display: inline;
-  float: right;
-  font-size: 18px;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 13px 10px 13px 10px;
-  text-decoration: none;
-  color: #efefef;
-}
-
-.nav > .nav-links > a:hover {
-  background-color: rgb(98, 97, 97);
-}
-
-.nav > #nav-check {
-  display: none;
+nav ul li {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .hero {
@@ -416,6 +426,12 @@ footer {
 /* Media Queries for Tablets */
 @media (max-width: 810px) {
 
+  .nav-right a:not(:first-child) {display: none;}
+  .nav-right a.icon {
+    float: right;
+    display: block;
+  }
+
   .product-container {
     flex-direction: column; 
     align-items: center; 
@@ -429,6 +445,14 @@ footer {
     margin-left: 0;
   }
 
+  nav ul {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  nav ul li {
+    margin-bottom: 10px; 
+  }
 
   .about-container {
     margin: 100px 50px; 
@@ -441,6 +465,11 @@ footer {
   .hero h1 {
     font-size: 3rem; 
   }
+
+  .menu {
+    display: none; 
+  }
+
   
   .hero button {
     padding: 0.8rem 1.5rem;
@@ -450,6 +479,7 @@ footer {
     margin: 50px 20px; 
     padding: 100px 50px; 
   }
+}
 
 .product {
   margin-left: 0;
@@ -457,50 +487,25 @@ footer {
 .product-container {
   margin-top: 150px;
 }
+
+@media screen and (max-width: 600px) {
+  .nav-right a:not(:first-child) {display: none;}
+  .nav-right a.icon {
+    float: right;
+    display: block;
+  }
 }
 
-@media (max-width:600px) {
-  .nav > .nav-btn {
-    display: inline-block;
+@media screen and (max-width: 600px) {
+  .nav-right.responsive {position: relative;}
+  .nav-right.responsive a.icon {
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 0;
+    top: 0;
   }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .nav > .nav-btn > label > span {
+  .nav-right.responsive a {
+    float: none;
     display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-  }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
+    text-align: left;
   }
 }
