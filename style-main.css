@@ -59,7 +59,8 @@ section {
 }
 
 .logo:hover {
-  filter: drop-shadow(1px 1px 5px black);
+  filter: drop-shadow(1px 1px 5px gold);
+  transform: scale(1.09);
 }
 
 .nav {
@@ -98,7 +99,9 @@ section {
 }
 
 .nav > .nav-links > a:hover {
-  background-color: rgb(98, 97, 97);
+  background-color: rgb(255, 255, 255);
+  color: red;
+  font-weight: bolder;
 }
 
 .nav > #nav-check {
@@ -127,7 +130,7 @@ section {
 }
 
 .hero h1:hover {
-  text-shadow: 0 0 5px #ffffff;
+  text-shadow: 0 0 5px #000000;
 }
 
 .hero button {
@@ -225,6 +228,10 @@ section {
   padding: 7px 10px;
 }
 
+.read-button:hover {
+  background-color: white;
+}
+
 .add-button:hover {
   background-color: green;
   color: white;
@@ -298,6 +305,10 @@ p {
 .abt-dog {
   width: 350px;
   height: auto;
+}
+
+.abt-dog:hover {
+  transform: scale(1.1);
 }
 
 .about-title {
